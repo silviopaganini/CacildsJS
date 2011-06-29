@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>index</title>
+	
+	<meta name="author" content="Silvio Paganini">
+	
+	<!--<script src="../src/CacildsJS.js" type="text/javascript"></script>
+	<script src="../src/display/Display.js" type="text/javascript"></script>
+	<script src="../src/display/Sprite.js" type="text/javascript"></script>
+	<script src="../src/display/Stage.js" type="text/javascript"></script>
+	
+	-->
+	
+	<script src="../build/CacildsJS.js" type="text/javascript"></script>
+	
+	
+	<script type='text/javascript'>
+		
+		function init(){
+			var t = new CACILDS.Stage();
+			
+			for(var i = 0; i<10; i++){
+				var a = new CACILDS.Sprite();
+				a.name = 'test' + i;
+				a.html("<p>test test " + i + "</p>");
+				t.addChild(a);
+			}
+			
+			var b = t.getChildByName("test2");
+			console.log(b);
+			
+			console.log(t);
+			
+		//	t.removeAllChildren();
+
+		}
+		
+	</script>
+	
+</head>
+<body onLoad='init()' />
+
+</html>
