@@ -10,6 +10,7 @@ CACILDS.Display = function()
 	this.children = [];
 	this.name = "";
 	this.dom = {};
+	this.parent = {};
 };
 
 CACILDS.Display.prototype = {
@@ -63,5 +64,28 @@ CACILDS.Display.prototype = {
 	{
 		if (p) this.dom.innerHTML = p;
 		else return this.dom.innerHTML;
+	},
+	
+	style : function ( style )
+	{
+		if(style)
+		{
+			for(var name in style)
+			{
+				this.dom.style[name] = style[name];
+			}
+		} else {
+			return this.dom.style;
+		}
+	},
+
+	addEventListener : function(type, handler)
+	{
+		this.dom.addEventListener(type, handler);
+	}, 
+
+	removeEventListener : function (type, handler)
+	{
+		this.dom.removeEventListener(type, handler);
 	}
 }
