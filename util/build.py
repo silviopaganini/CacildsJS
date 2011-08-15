@@ -15,6 +15,7 @@ FILES = [
 'CacildsJS.js',
 'display/Display.js',
 'display/Sprite.js',
+'display/Input.js',
 'display/Stage.js'
 ]
 
